@@ -1,0 +1,35 @@
+<head>
+  <title>image_share</title>
+</head>
+
+
+<body style="background-image: url(bottle.jpg);">
+<h1 style="text-align: center;">Welcome to ME SITE!</h1>
+<!-- <h2 class="btn btn-success"> {{> loginButtons}} </h2> -->
+<div class="container">
+
+
+
+  {{> images}}
+</div>  
+</body>
+
+<template class ="poop" id="poop" name="images" style="background-position: center;">
+<button class="js-add btn btn-success">Add to dankness</button>
+{{#each images}}
+<!-- <div class="row"> -->
+  <div class = "col-xs-8 col-md-10" style="width: auto; height: auto;">
+    <div class="thumbnail">
+      <div class="caption" style="background-image: url(trip.gif);">
+        <h3 style="color: white;">Thumbnail label</h3>
+          <img class= "js-img" src="{{img_src}}" alt="{{img_alt}}" style="position: center; object-position: center; background-position: center; width: 250px; height: 200px;" >
+        <p style="color: white;">Description of image</p>
+        <button class="js-delete btn btn-warning">Delete</button>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->
+
+
+{{/each}}
+</template>
